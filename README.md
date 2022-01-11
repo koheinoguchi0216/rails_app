@@ -1,62 +1,45 @@
-# rails6-compose
+# Baukis2 - 顧客管理システム
 
-Docker を用いて Rails 6 アプリケーションの開発・学習を始めるための設定ファイル等のセット
+## 説明
 
-## 必要なソフトウェア
+Baukis2 は企業向けの顧客管理システム（Ruby on Rails 学習用サンプル）です。
 
-* Docker 18 以上
-* Git 2.7 以上
+## 推奨されるシステム環境
 
-## 動作確認済みのOS
-
-* macOS 10.14 Mojave
-* Ubuntu 16.04
 * Ubuntu 18.04
+* Ruby 2.6.4
+* PostgreSQL 11.2
 
-※ Windowsユーザーの方は [README.win.md](README.win.md) を参照してください。
+## 注意事項
 
-## 凡例
+* 以下の手順では、一般ユーザーの権限でコマンドを実行してください。
 
-* この文書（README.md）では、Rails 6 アプリケーション開発の基盤となるふたつのコンテナ（`db` と `web`）を構築、起動、停止、破棄する手順および `web` コンテナにログインする方法を説明します。
-* `web` コンテナ上で Rails アプリケーションの骨格を作り、データベースを初期化する手順については [RAILS.md](RAILS.md) を参照してください。
-* ターミナルでコマンドを実行することで作業が進んでいきます。
-* コマンドを入力する際には、行頭にある `%` 記号を省いてください。
+## インストール手順
 
-## 設定ファイル等の取得
+* この `README.md` が存在するディレクトリで `bin/bundle` コマンドを実行してください。
 
-```
-% git clone https://github.com/oiax/rails6-compose.git
-% cd rails6-compose
-```
+## データベースのセットアップ
 
-## コンテナ群の構築
+* このシステム専用のデータベースを PostgreSQL 上に作成してください。
+* データベースへの接続パラメータに基づいて `config/database.yml` を作成してください。
+* `bin/rails db:setup` コマンドを実行してください。
 
-```
-% ./setup.sh
-```
+## hosts ファイルの設定
 
-## コンテナ群の起動
+* ホスト OS の `hosts` ファイルに次の 1 行を追加してください（要 root 権限）。
+  `hosts` ファイルは、Mac OS X の場合は `/private/etc/hosts` フォルダに、
+  Windows の場合は `C:\Windows\system32\drivers` フォルダにあります。
 
-```
-% docker-compose up -d
-```
+      127.0.0.1 example.com baukis2.example.com
 
-## Web コンテナにログイン
+## システムの起動と終了
 
-```
-% docker-compose exec web bash
-```
+* `bin/rails s` コマンドを実行するとシステムが起動します。
+* Ctrl-C を入力するとシステムが終了します。
 
-※ ログアウトするには `exit` コマンドを実行するか、`Ctrl-D` キーを入力してください。
+## システムの利用
 
-## コンテナ群の停止
-
-```
-% docker-compose stop
-```
-
-## コンテナ群の破棄
-
-```
-% docker-compose down
-```
+* ブラウザで以下の URL にアクセスしてください:
+    * http://baukis2.example.com:3000 -- 職員向けサイト
+    * http://baukis2.example.com:3000/admin -- 管理者向けサイト
+    * http://example.com:3000/mypage -- 顧客向けサイト

@@ -1,26 +1,23 @@
-FROM oiax/rails6-deps:latest
+FROM ruby:2.6.4
+RUN apt-get update -qq && apt-get install -y postgresql-client
+WORKDIR /myapp
 
-ARG UID=1000
-ARG GID=1000
+# install nodejs(LTS)
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs
 
-RUN mkdir /var/mail
-RUN groupadd -g $GID devel
-RUN useradd -u $UID -g devel -m devel
-RUN echo "devel ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+# install yarn
+RUN npm install --global yarn
 
-WORKDIR /tmp
-COPY init/Gemfile /tmp/Gemfile
-COPY init/Gemfile.lock /tmp/Gemfile.lock
+# gem
+COPY apps/baukis2/Gemfile* /myapp/
+RUN bundle update --bundler
 RUN bundle install
 
-COPY ./apps /apps
+# Add a script to be executed every time the container starts.
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+EXPOSE 3000
 
-RUN apk add --no-cache openssl shared-mime-info
-
-USER devel
-
-RUN openssl rand -hex 64 > /home/devel/.secret_key_base
-RUN echo $'export SECRET_KEY_BASE=$(cat /home/devel/.secret_key_base)' \
-  >> /home/devel/.bashrc
-
-WORKDIR /apps
+# Configure the main process to run when running the image
+CMD ["rails", "server", "-b", "0.0.0.0"]
