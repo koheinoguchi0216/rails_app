@@ -9,10 +9,6 @@ Baukis2 は企業向けの顧客管理システムのプロトタイプです・
 * Ruby 2.6.4
 * PostgreSQL 11.2
 
-## 注意事項
-
-* 以下の手順では、一般ユーザーの権限でコマンドを実行してください。
-
 ## 環境構築
 
 * 設定ファイル等の取得
@@ -35,3 +31,17 @@ docker-compose up
     * http://baukis2.example.com:3000 -- 職員向けサイト
     * http://baukis2.example.com:3000/admin -- 管理者向けサイト
     * http://example.com:3000/mypage -- 顧客向けサイト
+
+## 管理者としてログイン
+
+```
+hanako@example.com
+foobar
+```
+
+## 職員としてログイン
+
+```
+taro@example.com
+password
+```
