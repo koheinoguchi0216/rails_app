@@ -1,4 +1,3 @@
 /tmp/*
 !/tmp/.keep
 docker-compose.override.yml
-/.idea
