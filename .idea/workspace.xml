@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1e97406-d120-4d11-a2cb-86453b992873" name="Changes" comment="" />
+    <list default="true" id="a1e97406-d120-4d11-a2cb-86453b992873" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/baukis2" beforeDir="false" afterPath="$PROJECT_DIR$/apps/baukis2" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +91,7 @@
       <workItem from="1644389099607" duration="67000" />
       <workItem from="1644390907943" duration="201000" />
       <workItem from="1645168553619" duration="701000" />
-      <workItem from="1645406249468" duration="1063000" />
+      <workItem from="1645406249468" duration="1368000" />
     </task>
     <servers />
   </component>
