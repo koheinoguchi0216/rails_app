@@ -8,6 +8,7 @@ services:
     build: .
     command: >-
       bash -c "rm -rf /myapp/baukis2/tmp/pids/*.pid && bundle install -j4 &&
+      bin/rails db:create db:migrate &&
       bundle exec rails s -p 3000 -b '0.0.0.0'"
     environment:
       WEBPACKER_DEV_SERVER_HOST: "0.0.0.0"
