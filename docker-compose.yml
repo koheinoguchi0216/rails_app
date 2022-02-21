@@ -5,7 +5,7 @@ services:
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
     ports:
-      - "23306:3306"
+      - "3306:3306"
   web:
     build: .
     command: >-

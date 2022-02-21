@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a1e97406-d120-4d11-a2cb-86453b992873" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/baukis2/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/apps/baukis2/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/baukis2/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/apps/baukis2/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/baukis2/tmp/cache/bootsnap/compile-cache/1e/e9cc49d5071330" beforeDir="false" afterPath="$PROJECT_DIR$/apps/baukis2/tmp/cache/bootsnap/compile-cache/1e/e9cc49d5071330" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/baukis2/tmp/cache/bootsnap/compile-cache/a3/037f6f932e54a5" beforeDir="false" afterPath="$PROJECT_DIR$/apps/baukis2/tmp/cache/bootsnap/compile-cache/a3/037f6f932e54a5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/baukis2/tmp/cache/bootsnap/compile-cache/a3/c2b6f9fbcd74ee" beforeDir="false" afterPath="$PROJECT_DIR$/apps/baukis2/tmp/cache/bootsnap/compile-cache/a3/c2b6f9fbcd74ee" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +96,8 @@
       <workItem from="1644390907943" duration="201000" />
       <workItem from="1645168553619" duration="701000" />
       <workItem from="1645406249468" duration="3092000" />
+      <workItem from="1645410156791" duration="331000" />
+      <workItem from="1645410695768" duration="56000" />
     </task>
     <servers />
   </component>
@@ -107,5 +114,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
