@@ -2,4 +2,4 @@ tmp/*
 !/tmp/.keep
 docker-compose.override.yml
 apps/baukis2/log
-apps/baukis2/.idea/*
+.idea
